@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HELIL - Capacitando o Futuro. Educação, Cursos e Inclusão Digital no Bairro Novo das Indústrias.">
+  <title>HELIL - Capacitação e Educação</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #FFFFFF;
+      color: #333333;
+      line-height: 1.6;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 0;
+      text-align: center;
+    }
+    header {
+      background-color: #00C4CC;
+      color: #FFFFFF;
+      padding: 60px 0;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+    }
+    section {
+      padding: 60px 0;
+    }
+    .sobre, .objetivo, .contato, .galeria {
+      background-color: #F5F5F5;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #00C4CC;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #00C4CC;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: #009ba1;
+    }
+    .galeria img {
+      width: 100%;
+      max-width: 300px;
+      margin: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .galeria-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    footer {
+      background-color: #333333;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 20px 0;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+      header p, section p {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <img src="logo_helil.png" alt="Logo da HELIL" style="width:150px; margin-bottom: 20px;">
+      <h1>HELIL - Capacitação e Educação</h1>
+      <p>Formando pessoas, transformando futuros.</p>
+    </div>
+  </header>
+
+  <section class="sobre">
+    <div class="container">
+      <h2>Sobre a HELIL</h2>
+      <p>A HELIL - Associação Helil de Amparo à Criança foi fundada em 1983 no Bairro Novo das Indústrias. Atua na formação educacional e na capacitação profissional da comunidade, promovendo a inclusão social através da educação e do conhecimento.</p>
+    </div>
+  </section>
+
+  <section class="objetivo">
+    <div class="container">
+      <h2>Nosso Objetivo</h2>
+      <p>Promover a inclusão digital e democratizar o acesso à tecnologia. Oferecemos atividades que ensinam conceitos básicos de informática, segurança digital e mostram o impacto positivo da tecnologia no dia a dia.</p>
+    </div>
+  </section>
+
+  <section class="galeria">
+    <div class="container">
+      <h2>Nossas Atividades</h2>
+      <div class="galeria-container">
+        <img src="atividade1.png" alt="Aula de Jiu-Jitsu">
+        <img src="atividade2.png" alt="Dinâmica com bola em sala de aula">
+        <img src="atividade3.png" alt="Festa com crianças na HELIL">
+      </div>
+    </div>
+  </section>
+
+  <section class="contato">
+    <div class="container">
+      <h2>Contato</h2>
+      <p>Endereço: Rua Joel José de Carvalho, 449 — Bairro Novo das Indústrias<br>
+         CEP: 30610-610 — Belo Horizonte, MG</p>
+      <a href="mailto:danielmarques_1997@hotmail.com" class="btn">Fale com Daniel</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 HELIL - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+    window.addEventListener('scroll', () => {
+      sections.forEach(sec => {
+        const top = window.scrollY;
+        const offset = sec.offsetTop - 400;
+        const height = sec.offsetHeight;
+        if (top >= offset && top < offset + height) {
+          sec.style.opacity = 1;
+          sec.style.transform = 'translateY(0px)';
+          sec.style.transition = '1s';
+        }
+      });
+    });
+    sections.forEach(sec => {
+      sec.style.opacity = 0;
+      sec.style.transform = 'translateY(100px)';
+    });
+  </script>
+</body>
+</html>
